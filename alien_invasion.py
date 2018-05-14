@@ -26,10 +26,9 @@ def run_game():
     while True:
         
         gf.check_events(ai_settings,screen,ship,bullets)
+        
         ship.update()
-        # 会为每个 bullet 更新
-        bullets.update()
-        print(len(bullets))
+        gf.update_bullets(bullets)
         gf.update_screen(ai_settings,screen,ship,bullets)
         # 绘制空屏幕，擦去旧屏幕，不断更新，显示最近绘制的屏幕
         
